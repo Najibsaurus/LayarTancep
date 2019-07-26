@@ -1,4 +1,4 @@
-package id.layar.layartancep.ui.home;
+package id.layar.layartancep.ui.tv;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,47 +8,49 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import id.layar.layartancep.BuildConfig;
-import id.layar.layartancep.ui.detail.DetailMovie;
 import id.layar.layartancep.R;
 import id.layar.layartancep.data.Movies;
+import id.layar.layartancep.data.Teve;
+import id.layar.layartancep.ui.detail.DetailMovie;
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MoviesViewHolder> {
+public class TeveAdapter extends RecyclerView.Adapter<TeveAdapter.TeveViewHolder> {
     private final Activity activity;
-    private List<Movies> mMovies = new ArrayList<>();
+    private List<Teve> mTeve = new ArrayList<>();
 
-    public HomeAdapter(Activity activity) {
+    public TeveAdapter(Activity activity) {
         this.activity = activity;
     }
 
-    private List<Movies> getListMovie() {
-        return mMovies;
+    private List<Teve> getListMovie() {
+        return mTeve;
     }
 
-    void setListMovies(List<Movies> listCourses) {
-        if (listCourses == null) return;
-        this.mMovies.clear();
-        this.mMovies.addAll(listCourses);
+    void setListTeve(List<Teve> listTeve) {
+        if (listTeve == null) return;
+        this.mTeve.clear();
+        this.mTeve.addAll(listTeve);
     }
 
 
     @NonNull
     @Override
-    public MoviesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TeveViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item, parent, false);
-        return new MoviesViewHolder(view);
+        return new TeveViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MoviesViewHolder holder, int position) {
-        final Movies pos = getListMovie().get(position);
+    public void onBindViewHolder(@NonNull TeveViewHolder holder, int position) {
+        final Teve pos = getListMovie().get(position);
         if (pos != null){
             holder.titleItemView.setText(pos.getTitle());
             Glide.with(holder.itemView.getContext()).load(BuildConfig.BASE_URL_IMG+pos.getPoster_path()).into(holder.imagePoster);
@@ -74,11 +76,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MoviesViewHold
         return getListMovie().size();
     }
 
-    class MoviesViewHolder extends RecyclerView.ViewHolder {
+    class TeveViewHolder extends RecyclerView.ViewHolder {
         private final TextView titleItemView;
         private final ImageView imagePoster;
 
-        private MoviesViewHolder(View itemView) {
+        private TeveViewHolder(View itemView) {
             super(itemView);
             titleItemView = itemView.findViewById(R.id.title);
             imagePoster = itemView.findViewById(R.id.imagePoster);
@@ -86,3 +88,4 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MoviesViewHold
         }
     }
 }
+

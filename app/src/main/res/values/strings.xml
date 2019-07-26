@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LayarTancep</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Film</string>
+    <string name="title_dashboard">TV Show</string>
     <string name="title_notifications">TV Show</string>
     <string name="title_activity_detail_movie">DetailMovie</string>
 </resources>

@@ -1,11 +1,10 @@
-package id.layar.layartancep.utlis;
+package id.layar.layartancep.utils;
 
 import java.util.ArrayList;
 
 import id.layar.layartancep.data.Movies;
-import id.layar.layartancep.data.Teve;
 
-public class DataGenerator {
+public class FakeDataGenerator {
 
     public static ArrayList<Movies> generateDataMovie() {
 
@@ -25,25 +24,19 @@ public class DataGenerator {
         movies.add(new Movies("Burglary","/xztkk3qwvjTfKArjTkhWUCuadFY.jpg","While playing videogames Mike spots a mysterious masked man outside his building."));
 
 
+        movies.add(new Movies("Cars","/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg","Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters."));
+        movies.add(new Movies("Shazam!","/xnopI5Xtky18MPhK40cZAGAOVeV.jpg","A boy is given the ability to become an adult superhero in times of need with a single magic word."));
+        movies.add(new Movies("Long Shot","/m2ttWZ8rMRwIMT7zA48Jo6mTkDS.jpg","When Fred Flarsky reunites with and charms his first crush, Charlotte Field—one of the most influential women in the world. As Charlotte prepares to make a run for the Presidency, she hires Fred as her speechwriter and sparks fly"));
+        movies.add(new Movies("Hellboy","/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg","Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away."));
+        movies.add(new Movies("Once Upon a Time in Hollywood","/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg","A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles."));
+        movies.add(new Movies("John Wick: Chapter 3 – Parabellum","/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg","Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn."));
+        movies.add(new Movies("Wild and Free","/jLGNqaymD0ygyhafhv5fM3nXcge.jpg","Ellie and Jake fall in love, but struggle with their relationship when they discover an unexpected connection between their pasts."));
+        movies.add(new Movies("Crawl","/mKxpYRIrCZLxZjNqpocJ2RdQW8v.jpg","While struggling to save her father during a Category 5 hurricane, a young woman finds herself trapped inside a flooding house and fighting for her life against Florida’s most savage and feared predators."));
+        movies.add(new Movies("Blue Film: Estimation","/xRWht48C2V8XNfzvPehyClOvDni.jpg","The film depicts the plight of a female office worker whose boss introduces to the world of pornographic films."));
+        movies.add(new Movies("Red Shoes and the Seven Dwarfs","/xQccIXfq9J4tgbvdSSPPLLYZGRD.jpg","Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy."));
+
+
+
         return movies; }
-
-    public static ArrayList<Teve> generateDataTeve() {
-
-        ArrayList<Teve> teves = new ArrayList<>();
-
-        teves.add(new Teve("Cars","/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg","Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters."));
-        teves.add(new Teve("Shazam!","/xnopI5Xtky18MPhK40cZAGAOVeV.jpg","A boy is given the ability to become an adult superhero in times of need with a single magic word."));
-        teves.add(new Teve("Long Shot","/m2ttWZ8rMRwIMT7zA48Jo6mTkDS.jpg","When Fred Flarsky reunites with and charms his first crush, Charlotte Field—one of the most influential women in the world. As Charlotte prepares to make a run for the Presidency, she hires Fred as her speechwriter and sparks fly"));
-        teves.add(new Teve("Hellboy","/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg","Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away."));
-        teves.add(new Teve("Once Upon a Time in Hollywood","/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg","A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles."));
-        teves.add(new Teve("John Wick: Chapter 3 – Parabellum","/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg","Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn."));
-        teves.add(new Teve("Wild and Free","/jLGNqaymD0ygyhafhv5fM3nXcge.jpg","Ellie and Jake fall in love, but struggle with their relationship when they discover an unexpected connection between their pasts."));
-        teves.add(new Teve("Crawl","/mKxpYRIrCZLxZjNqpocJ2RdQW8v.jpg","While struggling to save her father during a Category 5 hurricane, a young woman finds herself trapped inside a flooding house and fighting for her life against Florida’s most savage and feared predators."));
-        teves.add(new Teve("Blue Film: Estimation","/xRWht48C2V8XNfzvPehyClOvDni.jpg","The film depicts the plight of a female office worker whose boss introduces to the world of pornographic films."));
-        teves.add(new Teve("Red Shoes and the Seven Dwarfs","/xQccIXfq9J4tgbvdSSPPLLYZGRD.jpg","Princes who have been turned into Dwarfs seek the red shoes of a lady in order to break the spell, although it will not be easy."));
-
-
-
-        return teves; }
 
 }
