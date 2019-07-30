@@ -14,15 +14,15 @@ jobs:
          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
          command: sudo chmod +x ./gradlew
       - run:
-          name: Download Dependencies
-          command: echo y | android update sdk --no-ui --all --filter "platform-tools, tools"
-          command: echo y | android update sdk --no-ui --all --filter "android-24, build-tools-25.0.2"
-          command: echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
-          command: echo y | android update sdk --no-ui --all --filter "extra-android-support"
-          command: chmod +x ./gradlew
-          command: chmod +x gradlew
-          command: ./gradlew --gradle-version 4.8 --distribution-type all
-          command: ./gradlew androidDependencies
+         name: Download Dependencies
+         command: echo y | android update sdk --no-ui --all --filter "platform-tools, tools"
+         command: echo y | android update sdk --no-ui --all --filter "android-24, build-tools-25.0.2"
+         command: echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
+         command: echo y | android update sdk --no-ui --all --filter "extra-android-support"
+         command: chmod +x ./gradlew
+         command: chmod +x gradlew
+         command: ./gradlew --gradle-version 4.8 --distribution-type all
+         command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
